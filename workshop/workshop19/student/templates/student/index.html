@@ -1,0 +1,9 @@
+{% extends "student/base.html" %}
+
+{% block bodyblock %}
+    {% for student in students %}
+    
+        <h3>이름:{{student.name}}</h3>
+        <a href="/students/{{student.id}}">전체보기</a>
+    {% endfor %}
+{% endblock %}

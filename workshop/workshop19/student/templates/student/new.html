@@ -1,0 +1,12 @@
+{% extends "student/base.html" %}
+{% block bodyblock %}
+
+<form action = "/students/create/" method="post">
+    {% csrf_token %}
+    <h3>이름</h3><input type="text" name="name"/><br>
+    <h3>이메일</h3><input type="email" name="email"/><br>
+    <h3>생년월일</h3><input type="date" name="birthday"/><br>
+    <h3>나이</h3><input type="text" name="age"/><br>
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}
